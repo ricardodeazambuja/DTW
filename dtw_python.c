@@ -155,8 +155,6 @@ void generates_distances(int len_x, int len_y, int dim, float *distances, float 
         {
             *(distances+(i*len_y)+j) = 0; //initialises
             
-            //printf("i,j: %d %d\n",i,j);
-            
             if (dim>1)
                 for (int d=0; d<dim; d++)
                 {
@@ -167,7 +165,6 @@ void generates_distances(int len_x, int len_y, int dim, float *distances, float 
             
             *(distances+(i*len_y)+j) = sqrt(*(distances+(i*len_y)+j));
             
-            //printf("(i*len_y),j: %d %d\n",(i*len_y),j);
         }
     }
 }
