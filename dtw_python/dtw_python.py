@@ -2,7 +2,7 @@
 import numpy
 import ctypes
 
-DTW=ctypes.CDLL("./dtw_python.so")
+DTW=ctypes.CDLL("/usr/local/lib/dtw_python.so")
 
 # void generates_distances(int len_x, int len_y, int dim, float *distances, float *x, float *y)
 generates_distances = DTW.generates_distances
@@ -18,20 +18,20 @@ generates_distances.argtypes = [
 def distances_matrix(x,y):
 
     assert len(x.shape)==len(y.shape), "Inputs must have the same number of columns"
-    
+
     if len(x.shape)==1:
         dim = ctypes.c_int32(1)
     else:
         dim = ctypes.c_int32(x.shape[1])
-    
+
     len_x = ctypes.c_int32(x.shape[0])
-    len_y = ctypes.c_int32(y.shape[0]) 
-    
+    len_y = ctypes.c_int32(y.shape[0])
+
     distances = numpy.empty((x.shape[0],y.shape[0]),dtype=numpy.float32)
-    
-    
+
+
     generates_distances(len_x, len_y, dim, distances, x.astype(dtype=numpy.float32), y.astype(dtype=numpy.float32))
-    
+
     return distances#.reshape((x.shape[0],y.shape[0]))
 
 # void generates_accumulated_cost(int len_x, int len_y, float *accumulated_cost, float *distances)
@@ -45,11 +45,11 @@ generates_accumulated_cost.argtypes = [
 
 def accumulated_cost_matrix(x,y,distances):
     len_x = ctypes.c_int32(x.shape[0])
-    len_y = ctypes.c_int32(y.shape[0]) 
+    len_y = ctypes.c_int32(y.shape[0])
     accumulated_cost = numpy.empty((x.shape[0],y.shape[0]),dtype=numpy.float32)
-    
+
     generates_accumulated_cost(len_x, len_y, accumulated_cost, distances)
-    
+
     return accumulated_cost
 
 # float path_cost(int len_x, int len_y, float *accumulated_cost, float *distances)
@@ -76,14 +76,14 @@ returns_path.argtypes = [
 
 def path_cost_calculation(x,y,distances,accumulated_cost):
     len_x = ctypes.c_int32(x.shape[0])
-    len_y = ctypes.c_int32(y.shape[0]) 
-    
+    len_y = ctypes.c_int32(y.shape[0])
+
     cost = path_cost(len_x, len_y, accumulated_cost, distances)
 
     path_length = returns_path_length()
-    
+
     path = numpy.empty((path_length,2),dtype=numpy.int32)
-    
+
     returns_path(path, path_length)
-    
+
     return path,cost
