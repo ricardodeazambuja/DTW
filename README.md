@@ -13,11 +13,11 @@ This version of the algorithm uses a C kernel, supporting multidimensional array
 if you are not happy with my explanations above, one of the best explanations about how the DTW works I've found on a [presentation by Elena Tsiporkova](http://www.mathcs.emory.edu/~lxiong/cs730_s13/share/slides/searching_sigkdd2012_DTW.pdf).
 
 ## Related works:  
-- https://github.com/ricardodeazambuja/IJCNN2016  
-- https://github.com/ricardodeazambuja/ICONIP2016  
-- https://github.com/ricardodeazambuja/IJCNN2017
-- https://github.com/ricardodeazambuja/IJCNN2017-2  
-- https://github.com/ricardodeazambuja/I2MTC2017-LSMFusion
+- [Graceful Degradation under Noise on Brain Inspired Robot Controllers](https://github.com/ricardodeazambuja/ICONIP2016)
+- [Diverse, Noisy and Parallel: a New Spiking Neural Network Approach for Humanoid Robot Control](https://github.com/ricardodeazambuja/IJCNN2016)
+- [Short-Term Plasticity in a Liquid State Machine Biomimetic Robot Arm Controller](https://github.com/ricardodeazambuja/IJCNN2017)
+- [Neurorobotic Simulations on the Degradation of Multiple Column Liquid State Machines](https://github.com/ricardodeazambuja/IJCNN2017-2)
+- [Sensor Fusion Approach Using Liquid StateMachines for Positioning Control](https://github.com/ricardodeazambuja/I2MTC2017-LSMFusion)
 
 
 ## References:
