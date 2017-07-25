@@ -1,5 +1,4 @@
-# DTW
-Dynamic Time Warping in Python / C (using ctypes)
+# DTW - Dynamic Time Warping in Python / C (using ctypes)
 
 Details and sample code can be found in this Jupyter notebook:  
 - [Dynamic_Time_Warping.ipynb](https://github.com/ricardodeazambuja/DTW/blob/master/Dynamic_Time_Warping.ipynb)
