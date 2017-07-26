@@ -23,5 +23,8 @@ if you are not happy with my explanations above, one of the best explanations ab
 ## References:
 1. Sakoe, H., and S. Chiba. “Dynamic Programming Algorithm Optimization for Spoken Word Recognition.” IEEE Transactions on Acoustics, Speech and Signal Processing 26, no. 1 (February 1978): 43–49.
 2. Meinard Müller. “Dynamic Time Warping.” In Information Retrieval for Music and Motion, ch. 4, 69-82. New York: Springer-Verlag, 2007.
-3. Ratcliff, Roger. “Continuous versus Discrete Information Processing: Modeling Accumulation of Partial Information.” Master Thesis, Radboud University Nijmegen, 2004.
+3. Ratcliff, Roger. “Continuous versus Discrete Information Processing: Modeling Accumulation of Partial Information.” Master Thesis, Radboud University Nijmegen, 2004.  
+
+
+http://ricardodeazambuja.com/
 
