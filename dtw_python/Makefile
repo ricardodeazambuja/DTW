@@ -3,12 +3,15 @@ CFLAGS=-fPIC -O3 -lpthread -std=gnu99 -Wall -ffast-math -mtune=native
 
 # http://stackoverflow.com/a/12099167
 UNAME_S := $(shell uname -s)
+
+# Linux
 ifeq ($(UNAME_S),Linux)
 		CFLAGS += -lrt -lm
 		LDFLAGS = -Wl,-soname,dtw_python.so
 
 endif
 
+# MacOS
 ifeq ($(UNAME_S),Darwin)
 		LDFLAGS = -Wl,-install_name,dtw_python.so
 endif
