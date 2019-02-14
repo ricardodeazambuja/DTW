@@ -12,6 +12,12 @@ This version of the algorithm uses a C kernel, supporting multidimensional array
 
 if you are not happy with my explanations above, one of the best explanations about how the DTW works I've found on a [presentation by Elena Tsiporkova](http://www.mathcs.emory.edu/~lxiong/cs730_s13/share/slides/searching_sigkdd2012_DTW.pdf).
 
+## How to install:
+1. Clone the repository, or download it as a zip file and unzip it.
+2. Inside the directory `dtw_python` execute `make`.
+3. Now, to install the library and make it accessible to all users you need to execute `sudo make install`.
+4. After that you don't need the `dtw_python` directory anymore and you can test it using the [jupyter notebook](https://github.com/ricardodeazambuja/DTW/blob/master/Dynamic_Time_Warping.ipynb).
+
 ## Related works:  
 - [Graceful Degradation under Noise on Brain Inspired Robot Controllers](https://github.com/ricardodeazambuja/ICONIP2016)
 - [Diverse, Noisy and Parallel: a New Spiking Neural Network Approach for Humanoid Robot Control](https://github.com/ricardodeazambuja/IJCNN2016)
